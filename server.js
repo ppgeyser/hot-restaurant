@@ -37,7 +37,7 @@ app.post("/api/reservation", function(req, res) {
   
     console.log(newReservation);
   
-    characters.push(newReservation);
+    reservation.push(newReservation);
   
     res.json(newReservation);
   });
