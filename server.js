@@ -58,7 +58,7 @@ app.get("/reservations", function (req, res) {
 
 //pull api data as json-------------------------------------------
 app.get("/api/reservation", function (req, res) {
-    return res.json(reservation);
+    return res.json(reservations);
 });
 
 //create new reservation as json----------------------------------
