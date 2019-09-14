@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reservation</title>
+    <!-- Bootstrap and external css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="jumbotron text-center text-white" style="background-color: rgb(86, 95, 95);">
+                <h1>Hot Restaurant</h1>
+                <strong><p>Make Your Reservation</p></strong>
+
+                <button type="submit" class="btn btn-default" id="view-tables">
+                                <strong> <i class="fa fa-table"></i> View Tables</strong></button>
+                <button type="control" class="btn btn-default" id="home">
+                                        <i class="fa fa-home"></i> Home</button>
+
+            </div>
+        </header>
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Add Train  -->
+                <div class="card mb-4">
+                    <div class="card-header text-white bg-info"><strong></strong>Table Reservation</div>
+                    <div class="card-body">
+
+                        <!-- Entry Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="name-input">Name</label>
+                                <input class="form-control" id="train-name-input" placeholder="" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="final-destination-input">Phone Number</label>
+                                <input class="form-control" id="destination-input" placeholder="" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="email-input">Email</label>
+                                <input class="form-control" id="email" placeholder="" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="id-input">Unique ID</label>
+                                <input class="form-control" id="primary" placeholder="" type="text">
+                            </div>
+                            <button class="btn btn-info" id="add-reservation-btn">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
