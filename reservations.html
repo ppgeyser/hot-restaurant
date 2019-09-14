@@ -23,9 +23,6 @@
     <!-- JQuery Reference -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-    <!-- external js file -->
-    <script src="reservations.js"></script>
-
 </head>
 
 <body>
@@ -74,6 +71,24 @@
             </div>
         </div>
     </div>
+
+<script>
+$("#add-reservation-btn").on("click", function(event) {
+    event.preventDefault();
+    var name = $("#name-input").val().trim();
+    var phone = $("#phone-input").val().trim();
+    var email =  $("#email-input").val().trim();
+    var uniqueID = $("#unique-ID").val().trim();
+    
+    var query = "api/reservation?" + name + "&" + email + "&" + phone + "&" + uniqueID;
+
+    $.post(query)
+      .then(function(data) {
+        console.log("reservation.html", data);
+        alert("Adding reservation...");
+      });
+  });
+</script>
 
 </body>
 

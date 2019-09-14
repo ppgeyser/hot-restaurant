@@ -3,8 +3,8 @@ var path = require("path");
 
 //define server variables-----------------------------------------
 var app = express();
-// var PORT = 3000;
-var PORT = process.env.PORT;
+var PORT = 3000;
+// var PORT = process.env.PORT;
 
 app.use(express.urlencoded({
     extended: true
@@ -65,9 +65,12 @@ app.get("/api/reservation", function (req, res) {
 app.post("/api/reservation", function (req, res) {
     var newReservation = req.body;
 
-    newReservation.routeName = newReservation.name.replace(/\s+/g, "").toLowerCase();
+    console.log(newReservation);
+
+    var routeName = newReservation.customerName.replace(/\s+/g, "").toLowerCase();
 
     console.log(newReservation);
+    console.log(routeName);
 
     reservations.push(newReservation);
 
