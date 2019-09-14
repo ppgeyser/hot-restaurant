@@ -75,14 +75,15 @@
 <script>
 $("#add-reservation-btn").on("click", function(event) {
     event.preventDefault();
-    var name = $("#name-input").val().trim();
-    var phone = $("#phone-input").val().trim();
-    var email =  $("#email-input").val().trim();
-    var uniqueID = $("#unique-ID").val().trim();
-    
-    var query = "api/reservation?" + name + "&" + email + "&" + phone + "&" + uniqueID;
 
-    $.post(query)
+    var newReservation = {
+        customerName: $("#name-input").val().trim(),
+        customerEmail: $("#email-input").val().trim(),
+        phoneNumber: $("#phone-input").val().trim(),
+        customerID: $("#unique-ID").val().trim()
+    };
+
+    $.post("/api/reservation", newReservation)
       .then(function(data) {
         console.log("reservation.html", data);
         alert("Adding reservation...");
