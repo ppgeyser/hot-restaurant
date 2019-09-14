@@ -6,7 +6,7 @@ $("#add-reservation-btn").on("click", function(event) {
     var email =  $("#email-input").val().trim();
     var uniqueID = $("#unique-ID").val().trim();
     
-    var query = "api/reservation?" + name + "&" + email + "&" + phone + "&" + uniqueID
+    var query = "api/reservation?" + name + "&" + email + "&" + phone + "&" + uniqueID;
 
     $.post(query)
       .then(function(data) {

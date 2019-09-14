@@ -62,7 +62,7 @@ app.get("/api/reservation", function (req, res) {
 });
 
 //create new reservation as json----------------------------------
-app.post("/api/reservation", function (req, res) {
+app.post("/api/:reservation", function (req, res) {
     var newReservation = req.body;
 
     newReservation.routeName = newReservation.name.replace(/\s+/g, "").toLowerCase();
